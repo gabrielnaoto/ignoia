@@ -6,7 +6,7 @@
 
     <div class="py-4">
         <h2>{{ page_title }}</h2>
-        <form method="post" class="my-4 pb-4" >
+        <form method="post" class="my-4 pb-4">
             {% crispy form %}
             <button type="button" onclick="validate()" class="btn btn-primary">Inscrever-se</button>
         </form>
@@ -19,6 +19,7 @@
         $('#id_telefone').inputmask('(99) 9999[9]-9999');
         $('#id_cpf').inputmask('999.999.999-99');
         $('#id_data_nascimento').inputmask('99/99/9999');
+
         function validate() {
             let curso = $('#id_curso').val();
             let outro = $('#id_curso_outro').val();
@@ -28,5 +29,12 @@
                 $('form').submit();
             }
         }
+
+        $('#id_curso').change(function () {
+            $('#id_curso_outro').val(null);
+        });
+        $('#id_curso_outro').change(function () {
+            $('#id_curso').val(null);
+        });
     </script>
 {% endblock %}

@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i^5t=e73-s!*ko(hl_cc34qq7gfq0$&#+58ia7x4ayhesg%0i9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', 'ignoia.herokuapp.com']
+ALLOWED_HOSTS = ['*', 'ignoia.herokuapp.com']
 
 
 # Application definition

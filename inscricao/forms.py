@@ -1,5 +1,5 @@
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit, Layout, Div, Field
+from crispy_forms.layout import Submit, Layout, Div, Field, HTML
 from django import forms
 
 from inscricao.models import Inscricao
@@ -56,6 +56,14 @@ class InscricaoForm(forms.ModelForm):
                     css_class='col'
                 ),
                 css_class='row'
+
+            ),
+            Div(
+                HTML(
+                    '<strong>Atenção!</strong><br/>'
+                    'Você deverá apenas informar um dos campos abaixo. Selecione um item da lista ou caso não encontrar o seu curso informe o nome de outro curso de graduação.'
+                ),
+                css_class='alert alert-info'
 
             ),
             Div(
