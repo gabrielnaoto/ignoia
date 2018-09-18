@@ -1,0 +1,32 @@
+{% extends 'template.html' %}
+
+{% load static crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="py-4">
+        <h2>{{ page_title }}</h2>
+        <form method="post" class="my-4 pb-4" >
+            {% crispy form %}
+            <button type="button" onclick="validate()" class="btn btn-primary">Inscrever-se</button>
+        </form>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#id_telefone').inputmask('(99) 9999[9]-9999');
+        $('#id_cpf').inputmask('999.999.999-99');
+        $('#id_data_nascimento').inputmask('99/99/9999');
+        function validate() {
+            let curso = $('#id_curso').val();
+            let outro = $('#id_curso_outro').val();
+            if (curso.trim().length == 0 && outro.trim().length == 0) {
+                alert('Você precisa selecionar um curso ou informar um novo.')
+            } else {
+                $('form').submit();
+            }
+        }
+    </script>
+{% endblock %}

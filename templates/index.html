@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+    <div class="py-5 text-center">
+        <h2>{{ page_title }}</h2>
+        <p class="lead">
+            Texto de descrição do que é isso
+        </p>
+        <a href="{% url 'inscricao' %}" class="btn btn-primary">Inscrever-se</a>
+    </div>
+
+{% endblock %}

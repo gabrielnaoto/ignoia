@@ -1,0 +1,16 @@
+Parabéns {{ inscricao.nome }}!
+
+Seu código de inscrição é: #{{ inscricao.pk }}
+Confira abaixo seus dados:
+
+    CPF: {{ inscricao.cpf }}
+    Nome: {{ inscricao.nome }}
+    E-mail: {{ inscricao.email }}
+    Data de nascimento: {{ inscricao.data_nascimento|default_if_none:'não informado' }}
+    Telefone: {{ inscricao.telefone }}
+    Curso: {{ inscricao.curso }}
+
+Obrigado por se insvrever-se.
+
+
+
