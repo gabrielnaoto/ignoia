@@ -40,16 +40,16 @@ Now we have Apache web server installed, and we have replaced the static test pa
 
 Install the Python 3 version of the Apache WSGI module. Note the ‘-py3′ ending in the packet name.
 
-$ sudo apt-get install libapache2-mod-wsgi-py3
+    $ sudo apt-get install libapache2-mod-wsgi-py3
 
 Restart Apache to use the new module
 
-$ sudo service apache2 restart
+    $ sudo service apache2 restart
 
 Check that your module is enabled
 
-$ apache2ctl -M|grep -i wsgi
- wsgi_module (shared)
+    $ apache2ctl -M|grep -i wsgi
+    wsgi_module (shared)
 
 ## Create Apache VirtualHost for WSGI
 
@@ -105,4 +105,17 @@ https://github.com/kennethreitz/dj-database-url
 Para criar a estrutura do banco de dados, você precisa executar as migrações
 
     python manage.py migrate
+
+
+Links úteis:
+
+https://python.org.br/instalacao-linux/
+https://www.tecmint.com/install-pip-in-linux/
+http://terokarvinen.com/2017/write-python-3-web-apps-with-apache2-mod_wsgi-install-ubuntu-16-04-xenial-every-tiny-part-tested-separately
+https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-debian-8
+https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-14-04
+https://docs.djangoproject.com/pt-br/2.1/howto/deployment/wsgi/
+http://pythonclub.com.br/configurando-ambiente-django-com-apache-e-mod-wsgi.html
+
+
 
