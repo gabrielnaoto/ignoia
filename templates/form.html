@@ -24,7 +24,7 @@
             let curso = $('#id_curso').val();
             let outro = $('#id_curso_outro').val();
             if (curso.trim().length == 0 && outro.trim().length == 0) {
-                alert('Você precisa selecionar um curso ou informar um novo.')
+                swal("Formulário incompleto", "Você precisa informar seu curso de graduação", "error");
             } else {
                 $('form').submit();
             }

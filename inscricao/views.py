@@ -46,5 +46,5 @@ class CreateInscricao(CreateView):
 
 
 def comprovante(request):
-    context = {'page_title': 'Obrigado!'}
-    return render(request, template_name='comprovante.html', context=context)
+    context = {'page_title': 'Minha página', 'success': True}
+    return render(request, template_name='index.html', context=context)
