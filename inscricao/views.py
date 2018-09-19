@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -33,7 +34,7 @@ class CreateInscricao(CreateView):
         send_mail(
             'Inscrição realizada com sucesso',
             render_to_string('email.html', context={'inscricao': self.object}),
-            'gabrielnaoto@yahoo.com.br',
+            settings.EMAIL_HOST_USER,
             [self.object.email],
             fail_silently=False,
         )
