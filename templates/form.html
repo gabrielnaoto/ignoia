@@ -18,7 +18,13 @@
     <script>
         $('#id_telefone').inputmask('(99) 9999[9]-9999');
         $('#id_cpf').inputmask('999.999.999-99');
-        $('#id_data_nascimento').inputmask('99/99/9999');
+
+        $('.dateinput').datepicker({
+            format: 'dd/mm/yyyy',
+            language: 'pt-BR',
+        });
+
+        $('input').attr('autocomplete', 'off');
 
         function validate() {
             let curso = $('#id_curso').val();
